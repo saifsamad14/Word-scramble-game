@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Game</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./js/script.js" type="module"></script>
+    <script src="./js/word.js" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h2><i class="fas fa-gamepad"></i> Word Scramble Game</h2>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class="fas fa-trophy"></i>
+                <span class="score">Score: 0</span>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-fire"></i>
+                <span class="streak">Streak: 0</span>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-clock"></i>
+                <span class="time">Time: <b>30</b>s</span>
+            </div>
+        </div>
+
+        <div class="difficulty-container">
+            <select class="difficulty-select">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <div class="category-select">
+                <select class="word-category">
+                    <option value="all">All Categories</option>
+                    <option value="science">Science</option>
+                    <option value="nature">Nature</option>
+                    <option value="technology">Technology</option>
+                    <option value="general">General</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="word-display">
+                <p class="word">addition</p>
+                <div class="word-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            
+            <div class="details">
+                <p class="hint">
+                    <i class="fas fa-lightbulb"></i>
+                    Hint: <span>process of adding numbers</span>
+                </p>
+                <p class="category">
+                    <i class="fas fa-tag"></i>
+                    Category: <span>General</span>
+                </p>
+            </div>
+
+            <div class="input-container">
+                <input type="text" placeholder="Enter a valid word" spellcheck="false">
+                <div class="input-feedback"></div>
+            </div>
+
+            <div class="buttons">
+                <button class="refresh-word">
+                    <i class="fas fa-sync-alt"></i> New Word
+                </button>
+                <button class="check-word">
+                    <i class="fas fa-check"></i> Check Word
+                </button>
+            </div>
+        </div>
+
+        <div class="achievements">
+            <h3><i class="fas fa-medal"></i> Achievements</h3>
+            <div class="achievement-list">
+                <!-- Achievements will be added dynamically -->
+            </div>
+        </div>
+
+        <div class="game-over-modal">
+            <div class="modal-content">
+                <h3>Game Over!</h3>
+                <p class="final-score">Your Score: <span>0</span></p>
+                <p class="high-score">High Score: <span>0</span></p>
+                <button class="play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
